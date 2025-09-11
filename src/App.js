@@ -581,7 +581,7 @@ export default function AgentOneDemo() {
       <div className="navbar">
         <div className="nav-inner container">
           <div className="brand">
-            <div className="brand-logo"><img src="/botcopy-logo.png" alt="Botcopy logo" /></div>
+            <div className="brand-logo"><img src={`${process.env.PUBLIC_URL}/botcopy-logo.png`} alt="Botcopy logo" /></div>
             <div>
               <h1>AgentOne Demo</h1>
               <div style={{fontSize:12, color:"var(--muted)"}}>Bot Cards • Bot Lists • Live Try-It</div>
