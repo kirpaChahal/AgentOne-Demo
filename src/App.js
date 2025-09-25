@@ -706,20 +706,20 @@ export default function AgentOneDemo() {
               <h3 style={{ marginTop: 14 }}>Bot Card Preview</h3>
 <div style={{ marginTop: 8 }}>
   <div style={{ maxWidth: 520, margin: "0 auto" }}>
-    <img
-      src="/botcard.png"
-      alt="Bot Card preview"
-      loading="lazy"
-      style={{
-        width: "100%",
-        height: "auto",
-        display: "block",
-        borderRadius: 14,
-        border: "1px solid rgba(255,255,255,0.14)",
-        boxShadow: "0 8px 24px rgba(0,0,0,.35)"
-      }}
-    />
-  </div>
+  <img
+    src={`${process.env.PUBLIC_URL}/botcard.png`}
+    alt="Bot Card preview"
+    loading="lazy"
+    style={{
+      width: "100%",
+      height: "auto",
+      display: "block",
+      borderRadius: 14,
+      border: "1px solid rgba(255,255,255,0.14)",
+      boxShadow: "0 8px 24px rgba(0,0,0,.35)"
+    }}
+  />
+</div>
 
               </div>
 
@@ -767,20 +767,21 @@ export default function AgentOneDemo() {
     <h3 style={{ marginTop: 14 }}>Bot List Preview</h3>
     <div style={{ marginTop: 8 }}>
       <div style={{ maxWidth: 520, margin: "0 auto" }}>
-        <img
-          src="/botlist.png"
-          alt="Bot List preview"
-          loading="lazy"
-          style={{
-            width: "100%",
-            height: "auto",
-            display: "block",
-            borderRadius: 14,
-            border: "1px solid rgba(255,255,255,0.14)",
-            boxShadow: "0 8px 24px rgba(0,0,0,.35)"
-          }}
-        />
-      </div>
+  <img
+    src={`${process.env.PUBLIC_URL}/botlist.png`}
+    alt="Bot List preview"
+    loading="lazy"
+    style={{
+      width: "100%",
+      height: "auto",
+      display: "block",
+      borderRadius: 14,
+      border: "1px solid rgba(255,255,255,0.14)",
+      boxShadow: "0 8px 24px rgba(0,0,0,.35)"
+    }}
+  />
+</div>
+
     </div>
 
     <h3 style={{ marginTop: 14 }}>Ways to Configure</h3>
