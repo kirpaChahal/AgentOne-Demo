@@ -11,9 +11,9 @@ function TryItScript() {
       action: "Click the Bot Card → instant switch to Billing (avatar/title update)."
     },
     {
-      title: "Forwarding (in Sales)",
+      title: "Query Preview (in Sales)",
       you: "I was charged twice and can't log in.",
-      bot: "Sales replies with a Forwarding Bot List.",
+      bot: "Sales replies with a Query Preview Bot List.",
       previews: [
         { bot: "Billing", text: "I can help with a duplicate charge—…" },
         { bot: "Support", text: "If you can't log in, try a password reset—…" }
