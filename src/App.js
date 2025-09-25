@@ -85,10 +85,10 @@ function TryItScript() {
                 </div>
               </div>
 
-              {/* Forwarding previews (optional) */}
+              {/* Query Preview (optional) */}
               {Array.isArray(s.previews) && s.previews.length > 0 && (
                 <div style={{ display: "grid", gap: 6 }}>
-                  <div style={{ fontSize: 12, opacity: 0.85 }}>Forwarding previews</div>
+                  <div style={{ fontSize: 12, opacity: 0.85 }}>Query Preview</div>
                   <div
                     style={{
                       display: "grid",
@@ -213,7 +213,7 @@ const EXAMPLE_BOT_LIST = {
   ],
 };
 
-// Bot List with forwarding enabled
+// Bot List with Query Preview enabled
 const EXAMPLE_BOT_LIST_FORWARD = {
   botcopy: [
     {
@@ -631,7 +631,7 @@ export default function AgentOneDemo() {
     <h2>AgentOne at a glance</h2>
     <p className="muted">
       AgentOne lets you orchestrate <b>multi-bot experiences</b> directly in chat. Use <b>Bot Card</b> for a single, high-intent
-      handoff and <b>Bot Lists</b> when users should choose among multiple destinations. Optionally enable <b>Forwarding</b> to
+      handoff and <b>Bot Lists</b> when users should choose among multiple destinations. Optionally enable <b>Query Preview</b> to
       preview responses from several bots before switching.
     </p>
 
@@ -655,7 +655,7 @@ export default function AgentOneDemo() {
       </div>
       <div className="card card--glow will-reveal" style={{ padding: 16 }}>
         <h3 style={{ marginTop: 0, display: "flex", alignItems: "center", gap: 8 }}>
-          <Sparkles size={18} /> Forwarding
+          <Sparkles size={18} /> Query Preview
         </h3>
         <p className="muted" style={{ margin: 0 }}>
           <code>enableForwarding</code> forwards the trigger message and shows <b>preview replies</b> to compare before switching.
@@ -676,7 +676,7 @@ export default function AgentOneDemo() {
         <Step icon={BookOpen} title="User acts">
           Clicking the card’s button or selecting a list item immediately switches the session to that bot.
         </Step>
-        <Step icon={ListTree} title="(Optional) Forwarding">
+        <Step icon={ListTree} title="(Optional) Query Preview">
           With <code>enableForwarding</code>, the user sees preview responses from each listed bot before choosing.
         </Step>
       </div>
@@ -789,20 +789,20 @@ export default function AgentOneDemo() {
       <li><b>Option 2:</b> Provide <code>bots</code> directly as an array of objects with <code>id</code>.</li>
     </ul>
     <p className="muted" style={{ marginTop: 8 }}>
-      In both cases, Botcopy resolves names and logos from the bot IDs. The <code>enableForwarding</code> flag works with
+      In both cases, Botcopy resolves names and logos from the bot IDs. The <code>Query Preview</code> works with
       <i> either</i> option.
     </p>
 
     <h3 style={{ marginTop: 14 }}>Option 1: Using a <code>botListId</code></h3>
     <CodeBlock label="Bot List via botListId" codeObj={EXAMPLE_BOT_LIST} />
 
-    <h3 style={{ marginTop: 14 }}>Option 1 + Forwarding</h3>
+    <h3 style={{ marginTop: 14 }}>Option 1 + Query Preview</h3>
     <CodeBlock label="Bot List via botListId (enableForwarding)" codeObj={EXAMPLE_BOT_LIST_FORWARD} />
 
     <h3 style={{ marginTop: 14 }}>Option 2: Using a list of <code>botIds</code></h3>
     <CodeBlock label="Bot List via bots array" codeObj={EXAMPLE_BOT_LIST_BOTS} />
 
-    <h3 style={{ marginTop: 14 }}>Option 2 + Forwarding</h3>
+    <h3 style={{ marginTop: 14 }}>Option 2 + Query Preview</h3>
     <CodeBlock label="Bot List via bots array (enableForwarding)" codeObj={EXAMPLE_BOT_LIST_BOTS_FORWARD} />
 
     <h3 style={{ marginTop: 14 }}>Properties</h3>
@@ -836,7 +836,7 @@ export default function AgentOneDemo() {
       <li><b>Streamlined UX:</b> Users can easily choose the right bot without guessing.</li>
     </ul>
 
-    <h3 style={{ marginTop: 14 }}>Bot List Forwarding</h3>
+    <h3 style={{ marginTop: 14 }}>Bot List Query Preview</h3>
     <p className="muted">When <code>enableForwarding</code> is <b>true</b> (with either configuration):</p>
     <ul className="muted" style={{ paddingLeft: 18, marginTop: 8 }}>
       <li>The original user query is forwarded to all bots in the list.</li>
