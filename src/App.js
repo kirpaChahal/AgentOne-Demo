@@ -220,7 +220,7 @@ const EXAMPLE_BOT_LIST_FORWARD = {
       botList: {
         title: "Select a Department",
         botListId: "689e531025dd6e35a13da776",
-        enableForwarding: true,
+        queryPreview: true,
       },
     },
   ],
@@ -236,7 +236,7 @@ const EXAMPLE_BOT_LIST_BOTS_FORWARD = {
           { id: "689e531025dd6e35a13da777" },
           { id: "689e531025dd6e35a13da778" }
         ],
-        enableForwarding: true
+        queryPreview: true
       }
     }
   ]
@@ -658,7 +658,7 @@ export default function AgentOneDemo() {
           <Sparkles size={18} /> Query Preview
         </h3>
         <p className="muted" style={{ margin: 0 }}>
-          <code>enableForwarding</code> forwards the trigger message and shows <b>preview replies</b> to compare before switching.
+          <code>queryPreview</code> forwards the trigger message and shows <b>preview replies</b> to compare before switching.
         </p>
       </div>
     </div>
@@ -677,7 +677,7 @@ export default function AgentOneDemo() {
           Clicking the card’s button or selecting a list item immediately switches the session to that bot.
         </Step>
         <Step icon={ListTree} title="(Optional) Query Preview">
-          With <code>enableForwarding</code>, the user sees preview responses from each listed bot before choosing.
+          With <code>queryPreview</code>, the user sees preview responses from each listed bot before choosing.
         </Step>
       </div>
     </div>
@@ -689,7 +689,7 @@ export default function AgentOneDemo() {
         <li>Use action-oriented <code>buttonText</code> (e.g., “Talk with Support”).</li>
         <li>Keep lists focused: 3–6 destinations is ideal.</li>
         <li>Prefer <code>botListId</code> for governance; use <code>bots</code> array for quick demos.</li>
-        <li>Enable Forwarding when users benefit from comparing answers first.</li>
+        <li>Enable queryPreview when users benefit from comparing answers first.</li>
         <li>Provide clear exit paths back to your primary bot.</li>
       </ul>
     </div>
@@ -798,13 +798,13 @@ export default function AgentOneDemo() {
     <CodeBlock label="Bot List via botListId" codeObj={EXAMPLE_BOT_LIST} />
 
     <h3 style={{ marginTop: 14 }}>Option 1 + Query Preview</h3>
-    <CodeBlock label="Bot List via botListId (enableForwarding)" codeObj={EXAMPLE_BOT_LIST_FORWARD} />
+    <CodeBlock label="Bot List via botListId (queryPreview)" codeObj={EXAMPLE_BOT_LIST_FORWARD} />
 
     <h3 style={{ marginTop: 14 }}>Option 2: Using a list of <code>botIds</code></h3>
     <CodeBlock label="Bot List via bots array" codeObj={EXAMPLE_BOT_LIST_BOTS} />
 
     <h3 style={{ marginTop: 14 }}>Option 2 + Query Preview</h3>
-    <CodeBlock label="Bot List via bots array (enableForwarding)" codeObj={EXAMPLE_BOT_LIST_BOTS_FORWARD} />
+    <CodeBlock label="Bot List via bots array (queryPreview)" codeObj={EXAMPLE_BOT_LIST_BOTS_FORWARD} />
 
     <h3 style={{ marginTop: 14 }}>Properties</h3>
     <Props
@@ -812,7 +812,7 @@ export default function AgentOneDemo() {
         { name: "title", type: "string", description: "List title (e.g., “Select a Department”)." },
         { name: "botListId", type: "string (optional)", description: "ID of a saved bot list (AgentOne Portal)." },
         { name: "bots", type: "array (optional)", description: "Array of bot objects with an id field. Names/logos are resolved automatically." },
-        { name: "enableForwarding", type: "boolean (optional)", description: "If true, forwards the triggering user message to all listed bots and shows preview responses (works with either botListId or bots array)." }
+        { name: "queryPreview", type: "boolean (optional)", description: "If true, forwards the triggering user message to all listed bots and shows preview responses (works with either botListId or bots array)." }
       ]}
     />
 
@@ -838,7 +838,7 @@ export default function AgentOneDemo() {
     </ul>
 
     <h3 style={{ marginTop: 14 }}>Bot List Query Preview</h3>
-    <p className="muted">When <code>enableForwarding</code> is <b>true</b> (with either configuration):</p>
+    <p className="muted">When <code>queryPreview</code> is <b>true</b> (with either configuration):</p>
     <ul className="muted" style={{ paddingLeft: 18, marginTop: 8 }}>
       <li>The original user query is forwarded to all bots in the list.</li>
       <li>Each bot’s preview response is shown to the user.</li>
